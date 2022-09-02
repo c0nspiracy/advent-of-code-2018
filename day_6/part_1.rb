@@ -4,7 +4,7 @@ def manhattan_distance(x1, y1, x2, y2)
   (x1 - x2).abs + (y1 - y2).abs
 end
 
-coords = File.readlines('input.txt', chomp: true).map { |line| line.split(", ").map(&:to_i) }
+coords = ARGF.readlines(chomp: true).map { |line| line.split(", ").map(&:to_i) }
 
 max = coords.flatten.max
 grid = Array.new(max + 1) { Array.new(max + 1, 0) }
